@@ -164,7 +164,7 @@ footer {
 	.contenedor-columnas{
 	display: inline-block;
 	width: 100%;
-}
+	}
 	.columna-izquierda, .columna-derecha {
 		width: 100%;
 		float: none;
@@ -174,5 +174,8 @@ footer {
 	}
 	.columna-derecha-box {
 		margin: 15px 15px 15px 15px ;
+	}
+	span {
+		font-size: 1.5em;
 	}
 }
