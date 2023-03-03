@@ -22,96 +22,106 @@
 			<div class="box-izquierdo"> 
 
 				<!-- box Foto -->
-				<div class="box-foto"> 
-					<div class="box-foto-nombre"><h1 style="color: #fff;">Eduardo Rosas</h1></div>
-					<img src="images/foto2.jpg" style="width:100%" alt="Foto Retrato">
-				<!-- fin box Foto -->
+				<div class="box-foto">
+
+					<!-- box nombre foto y profesión-->
+					<div class="box-foto-nombre"><h2 style="color: #fff;">Eduardo Rosas</h2></div>
+					<div class="box-foto-profesion"><h2 style="color: #fff;">Enfermero Uni.</h2></div> 
+					<!-- fin box nombre foto y profesión-->
+
+					<!-- box slide -->
+					<div class="slide-presentacion">
+						<img class="mislide" src="images/foto1.jpg" style="width:100%" alt="Trabajo 1">
+						<img class="mislide" src="images/foto2.jpg" style="width:100%" alt="Trabajo 2">
+						<img class="mislide" src="images/foto3.jpg" style="width:100%" alt="Trabajo 3">
+						<img class="mislide" src="images/foto4.jpg" style="width:100%" alt="Trabajo 4">
+						<img class="mislide" src="images/foto5.jpg" style="width:100%" alt="Trabajo 5">
+						<img class="mislide" src="images/foto6.jpg" style="width:100%" alt="Trabajo 6">
+						<img class="mislide" src="images/foto7.jpg" style="width:100%" alt="Trabajo 7">
+						<img class="mislide" src="images/foto8.jpg" style="width:100%" alt="Trabajo 8">
+						<img class="mislide" src="images/foto9.jpg" style="width:100%" alt="Trabajo 9">
+						<img class="mislide" src="images/foto10.jpg" style="width:100%" alt="Trabajo 10">
+						<img class="mislide" src="images/foto11.gif" style="width:100%" alt="Trabajo 11">
+						<img class="mislide" src="images/foto12.gif" style="width:100%" alt="Trabajo 12">
+
+						<!-- box slide flechas -->
+						<button class="miboton-izquierdo" onclick="plusDivs(-1)">&#10094 </button>
+						<button class="miboton-derecho" onclick="plusDivs(1)">&#10095 </button>
+						<!-- box slide flechas -->
+					</div>
+					<!-- fin box slide -->
+
+						<!-- js slide foto ///////////////////////-->
+							<script>
+								var slideIndex = 1;
+								showDivs(slideIndex);
+
+								function plusDivs(n) {
+								  showDivs(slideIndex += n);
+								}
+
+								function showDivs(n) {
+								  var i;
+								  var x = document.getElementsByClassName("mislide");
+								  if (n > x.length) {slideIndex = 1}
+								  if (n < 1) {slideIndex = x.length}
+								  for (i = 0; i < x.length; i++) {
+								    x[i].style.display = "none";  
+								  }
+								  x[slideIndex-1].style.display = "block";  
+								}
+							</script>
+						<!-- fin js slide foto /////////////////////-->
+
 				</div> 
+				<!-- fin box Foto -->
 
 				<!-- box Izquierda info-->
 				<div class="box-izquierda-info">
-
-					<!-- box titulo profesional -->
-					<div> 	
-						<p><i class="fa fa-briefcase icono-1"></i><span class="titulo">Enfermero Universitario</span></p>
-						<hr>
-					<!-- fin box titulo profesional -->
-					</div> 
 					
 					<!-- box datos personales -->
 					<div class="box-datos-personales"> 
-						<p><i class="fa fa-file-text-o icono-1"></i><span class="titulo">Datos Personales</span></p>
-						<p><i class="fa fa-user-o icono-2"></i> Eduardo Rosas</p>
-						<p><i class="fa fa-envelope icono-2"></i> <a href="mailto:eduardoenfermero@hotmail.com.ar" style="text-decoration: none; color: #ffad33;">eduardoenfermero@hotmail.com.ar</a></p>
-						<p><i class="fa fa-phone icono-2"></i> +54 9 1169658365</p>
-						<p><i class="fa fa-home icono-2"></i> Morón, Buenos Aires</p>
-						<p><i class="fa fa-birthday-cake icono-2"></i> 28/10/1973</p>
-						<p><i class="fa fa-address-card-o icono-2"></i> DNI 13245678</p>
-						<p><i class="fa fa-car icono-2"></i> Reg. Prof. B1D3</p>
-						<p><i class="fa fa-car icono-2"></i> Reg. Profesional B1D3</p>
-						<p><i class="fa fa-id-card icono-2"></i> Mat. Nacional 13245678</p>
-						<p><i class="fa fa-address-card icono-2"></i> Mat. Provincial 13245678</p>
-						<p><i class="fa fa-child icono-2"></i> 2 hijos</p>
-						<hr>
+						<p><i class="fa fa-heartbeat icono-2"></i> 49 Años
+						<br><i class="fa fa-home icono-2"></i> Buenos Aires
+						<br><i class="fa fa-envelope icono-2"></i> <a href="mailto:enfermero@gmail.com" style="text-decoration: none; color: #ffad33;">enfermero@gmail.com</a>
+						<br><i class="fa fa-phone icono-2"></i> +54 9 123456789
+						<br><i class="fa fa-car icono-2"></i> Reg. Profesional B1D3
+						<br><i class="fa fa-id-card icono-2"></i> Mat. Nacional 13245678
+						<br><i class="fa fa-address-card icono-2"></i> Mat. Provincial 13245678</p>
+					</div> 
 					<!-- Fin box datos personales -->
-					</div> 
 
-					<!-- box habilidades -->
-					<div class="box-habilidades"> 
-						<p><i class="fa fa-handshake-o icono-1"></i><span class="titulo">Habilidades</span></p>
-						<p>Trabajo en Equipo</p>
-						<div class="barra-porcentaje-fondo">
-							<div class="barra-porcentaje-relleno" style="width:100%">100%</div>
-						</div>
-						<p>Liderazgo</p>
-						<div class="barra-porcentaje-fondo">
-							<div class="barra-porcentaje-relleno" style="width:80%">80%</div>
-						</div>
-						<p>Comunicación</p>
-						<div class="barra-porcentaje-fondo">
-							<div class="barra-porcentaje-relleno" style="width:95%">95%</div>
-						</div>
-						<br><hr>
-					<!-- fin box habilidades -->
-					</div> 	
-
-					<!-- box Idiomas -->
-					<div class="box-idiomas"> 
-						<p><i class="fa fa-globe icono-1"></i><span class="titulo">Idiomas</span></p>
-						<p>Inglés</p>
-						<div class="barra-porcentaje-fondo">
-							<div class="barra-porcentaje-relleno" style="width:100%">100%</div>
-						</div>
-						<p>Francés</p>
-						<div class="barra-porcentaje-fondo">
-							<div class="barra-porcentaje-relleno" style="width:80%">80%</div>
-						</div>
-						<p>Portugués</p>
-						<div class="barra-porcentaje-fondo">
-							<div class="barra-porcentaje-relleno" style="width:80%">80%</div>
-						</div>
-					<!-- fin box Idiomas -->
-					</div> 
-
-				<!-- fin box Izquierda info-->
 				</div> 
+				<!-- fin box Izquierda info-->
 
-			<!-- fin box izquierdo -->
 			</div>
+			<!-- fin box izquierdo -->
 
-		<!-- fin Columna Izquierda -->
 		</div> 
+		<!-- fin Columna Izquierda -->
 
-<!-- .................................................................... -->
+<!-- ......................................................................................................................... -->
 		
 		<!-- Columna derecha -->
 		<div class="columna-derecha"> 
 			
-			<!-- bloque experiencia laboral  -->
-			<div class="columna-derecha-box"> 
+			<!-- tabs pestañas  -->
+			<div class="box-pesta">
+				
+				<button class="boton-pesta" onclick="abrirPesta('exp-lab')">Experiencia</button>
+				<button class="boton-pesta" onclick="abrirPesta('form-acad')">Formación </button>
+				<button class="boton-pesta" onclick="abrirPesta('cursos')">Cursos</button>
+				<button class="boton-pesta" onclick="abrirPesta('idiomas')">Idiomas + </button>
+				<button class="boton-pesta" onclick="abrirPesta('acercademi')">Acerca de mi</button>
+
+			</div>
+			<!-- fin tabs pestañas  -->
+
+			<!-- bloque experiencia laboral /////////////////////////////////////////////////////////////////////// -->
+			<div id="exp-lab" class="columna-derecha-box pesta"> 
 
 				<!-- Titulo experiencia laboral  -->
-				<p><i class="fa fa-user-md icono-0"></i><span>Experiencia Laboral</span></p>
+				<p><i class="fa fa-user-md icono-1"></i><span>Experiencia Laboral</span></p>
 
 				<!-- experiencia laboral 1 -->
 				<div class="columna-derecha-box-info"> 
@@ -125,13 +135,13 @@
 					 	Tareas: Asistencia a paciente de  alta complejidad 
 					 </p>
 					 <hr>
-				<!-- fin experiencia laboral 1 -->
 				</div> 
+				<!-- fin experiencia laboral 1 -->
 
 				<!-- experiencia laboral 2 -->
 				<div class="columna-derecha-box-info"> 
 					 <div>
-					 	<h3>Sanatorio San Martín/ Enfermero Sadofe Guardia</h3>
+					 	<h3>Sanatorio San Martin/ Enfermero Sadofe Guardia</h3>
 					 </div>
 					 <div>
 					 	<p><i class="fa fa-calendar icono-2"></i>Junio 2021 - Junio 2022</p>
@@ -140,11 +150,11 @@
 					 	Tareas: Guardias nocturnas Fin de semana y feriados, triage, higiene y confort de paciente, administración de medicación.
 					 </p>
 					 <hr>
-				<!-- fine xperiencia laboral 2 -->
-				</div> 
+				</div>
+				<!-- fine xperiencia laboral 2 -->				
 
 				<!-- experiencia laboral 3 -->
-				<div class="columna-derecha-box-info"> 
+				<div  class="columna-derecha-box-info"> 
 					 <div>
 					 	<h3>Residencia Tercera Edad San Jose/ Enfermeria General</h3>
 					 </div>
@@ -154,19 +164,19 @@
 					 <p>
 					 	Tareas: Higiene y Confort de paciente, admnistración de medicación.
 					 </p>
-				<!-- fin experiencia laboral 3 -->
 				</div> 
+				<!-- fin experiencia laboral 3 -->				
 
 			<!-- fin bloque experiencia laboral  -->
 			</div>
 
-			<!-- bloque Formacion Academica  -->
-			<div class="columna-derecha-box"> 
+			<!-- bloque Formación Academica  //////////////////////////////////////////////////////////////-->
+			<div id="form-acad" class="columna-derecha-box pesta" style="display:none"> 
 
-				<!-- Titulo experiencia laboral  -->
-				<p><i class="fa fa-graduation-cap icono-0"></i><span>Formación Académica</span></p>
+				<!-- Titulo formación academica  -->
+				<p><i class="fa fa-graduation-cap icono-1"></i><span>Formación Académica</span></p>
 
-				<!-- Formacion Academica 1 -->
+				<!-- Formación Academica 1 -->
 				<div class="columna-derecha-box-info"> 
 					 <div>
 					 	<h3>UBA - Facultad de Medicina - Sede Vicente Lopez</h3>
@@ -175,12 +185,12 @@
 					 	<p><i class="fa fa-calendar icono-2"></i>Abril 2023 - <span class="actualidad">CURSANDO</span> </p>
 					 </div>
 					 <p>
-					 	Titulo Obtenido:
+					 	Titulo a Obtener: Licenciatura en Enfermería
 					 	<br>Promedio:
 					 </p>
 					 <hr>
-				<!-- fin Formacion Academica 1 -->
 				</div> 
+				<!-- fin Formación Academica 1 -->
 
 				<!-- Formacion Academica 2 -->
 				<div class="columna-derecha-box-info"> 
@@ -195,8 +205,8 @@
 					 	<br>Promedio: 7.5
 					 </p>
 					 <hr>
-				<!-- fin Formacion Academica 2 -->
 				</div> 
+				<!-- fin Formacion Academica 2 -->
 
 				<!-- Formacion Academica 3 -->
 				<div class="columna-derecha-box-info"> 
@@ -207,20 +217,20 @@
 					 	<p><i class="fa fa-calendar icono-2"></i>Marzo 2016 - Diciembre 2016</p>
 					 </div>
 					 <p>
-					 	Titulo Obtenido: CBC Enfermeria 
+					 	Titulo Obtenido: CBC Enfermería 
 					 	<br>Promedio: 8
 					 </p>
-				<!-- fin Formacion Academica 3 -->
 				</div> 
+				<!-- fin Formacion Academica 3 -->
 
-			<!-- fin bloque Formacion Academica  -->
 			</div>
+			<!-- fin bloque Formacion Academica  -->
 
-			<!-- bloque Cursos-->
-			<div class="columna-derecha-box"> 
+			<!-- bloque Cursos  //////////////////////////////////////////////////////////////////////////////////-->
+			<div id="cursos" class="columna-derecha-box pesta" style="display:none"> 
 				
 				<!-- Titulo Cursos  -->
-				<p><i class="fa fa-certificate icono-0"></i><span>Cursos</span></p>
+				<p><i class="fa fa-certificate icono-1"></i><span>Cursos</span></p>
 
 				<!-- Cursos 1 -->
 				<div class="columna-derecha-box-info"> 
@@ -235,8 +245,8 @@
 					 	<br>Promedio: Aprobado
 					 </p>
 					 <hr>
-				<!-- fin Cursos 1 -->
 				</div> 
+				<!-- fin Cursos 1 -->
 
 				<!-- Cursos 2 -->
 				<div class="columna-derecha-box-info">
@@ -251,8 +261,8 @@
 					 	<br>Promedio: Aprobado
 					 </p>
 					 <hr>
-				<!-- fin Cursos 2 -->
 				</div> 
+				<!-- fin Cursos 2 -->
 
 				<!-- Cursos 3 -->
 				<div class="columna-derecha-box-info"> 
@@ -266,25 +276,111 @@
 					 	Titulo Obtenido: ECG Completo
 					 	<br>Promedio: Aprobado
 					 </p>
-				<!-- fin Cursos 3 -->
 				</div> 
+				<!-- fin Cursos 3 -->
 
 			</div><!-- fin bloque Cursos  -->			
+
+			<!-- bloque idiomas y habilidades //////////////////////////////////////////////////////////////////////////////////////-->
+			<div id="idiomas" class="columna-derecha-box pesta" style="display:none"> 
+
+					<!-- box Idiomas -->
+					<div class="box-idiomas"> 
+						<p><i class="fa fa-globe icono-1"></i><span class="titulo">Idiomas</span></p>
+						
+						<p>Inglés</p>
+						<div class="barra-porcentaje-fondo">
+							<div class="barra-porcentaje-relleno" style="width:100%">100%</div>
+						</div>
+						<p>Francés</p>
+						<div class="barra-porcentaje-fondo">
+							<div class="barra-porcentaje-relleno" style="width:80%">80%</div>
+						</div>
+						<p>Portugués</p>
+						<div class="barra-porcentaje-fondo">
+							<div class="barra-porcentaje-relleno" style="width:80%">80%</div>
+						</div>
+						<br>
+						<hr>
+					</div> 
+					<!-- fin box Idiomas -->
+
+					<!-- box habilidades -->
+					<div class="box-habilidades"> 
+						<p><i class="fa fa-handshake-o icono-1"></i><span class="titulo">Habilidades</span></p>
+
+						<p>Trabajo en Equipo</p>
+						<div class="barra-porcentaje-fondo">
+							<div class="barra-porcentaje-relleno" style="width:100%">100%</div>
+						</div>
+						<p>Liderazgo</p>
+						<div class="barra-porcentaje-fondo">
+							<div class="barra-porcentaje-relleno" style="width:80%">80%</div>
+						</div>
+						<p>Comunicación</p>
+						<div class="barra-porcentaje-fondo">
+							<div class="barra-porcentaje-relleno" style="width:95%">95%</div>
+						</div>
+						<br>
+					</div> 
+					<!-- fin box habilidades -->
+
+			<!-- fin bloque habilidades //////////////////////////////////////////////////////////////////////////////////////-->
+			</div>
+
+			<!-- bloque Acerca de Mi /////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<div id="acercademi" class="columna-derecha-box pesta" style="display: none;">
+
+				<!-- Titulo Acerca de mi  -->
+				<p><i class="fa fa-star icono-1"></i><span>Acerca de mi</span></p>
+				
+				<!-- Texto Acerca de mi  -->
+				<div class="columna-derecha-box-info">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<br>
+				<hr>
+				</div>
+				<!-- fin Texto Acerca de mi  -->
+
+				<!-- Video  -->
+				<div class="columna-derecha-box-info">
+					<iframe width="100%" height="315" src="https://www.youtube.com/embed/YsrdQLq_rHk?&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; mute; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+				<!-- fin Video  -->			
+				
+			</div>
+			<!-- fin bloque presentación -->
+
+			<!--///////////////////// JS Pestañas ////////////////////////////////////////////-->
+			<script>
+			function abrirPesta(nombrePesta) {
+			  var i;
+			  var x = document.getElementsByClassName("pesta");
+			  for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";  
+			  }
+			  document.getElementById(nombrePesta).style.display = "block";  
+			}
+			</script>
+			<!-- Fin //////////////// JS Pestañas ////////////////////////////////////////// -->
 
 		</div><!-- fin columna derecha   -->
 		
 	</div>	<!-- fin contenedor de columna derecha y Columna Izquierda -->
 
 <!-- .................................................................... -->	
+
 <footer> <!-- footer -->
 
-		<div class="contenedor-redes"> <!-- bloque redes-->
+		<!-- bloque redes-->
+		<div class="contenedor-redes"> 
 			<p style="color:#fff!important">Mis Redes Sociales</p>
 			<a href="https://www.facebook.com/eduardorosas" target="_blank"><i class="fa fa-facebook-square"></i></a> 
 			<a href="https://www.twitter.com/eduardorosas" target="_blank"><i class="fa fa-twitter"></i></a>
 			<a href="https://www.instagram.com/eduardorosas" target="_blank"><i class="fa fa-instagram"></i></a>
 			<a href="https://www.linkedin.com/eduardorosas" target="_blank"><i class="fa fa-linkedin"></i></a>
-		</div> <!-- fin bloque redes-->
+		</div> 
+		<!-- fin bloque redes-->
 
 </footer><!-- fin footer -->
 </body>
